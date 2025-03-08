@@ -61,12 +61,14 @@ self.C3_GetObjectRefTable = function () {
 		C3.Plugins.Multiplayer.Cnds.ComparePeerCount,
 		C3.Plugins.Multiplayer.Cnds.OnHostDisconnected,
 		C3.Plugins.Multiplayer.Acts.KickPeer,
+		C3.Plugins.Multiplayer.Acts.DisconnectRoom,
 		C3.Plugins.Multiplayer.Cnds.SignallingIsInRoom,
 		C3.Plugins.Mouse.Cnds.OnObjectClicked,
 		C3.Plugins.Multiplayer.Acts.HostBroadcastMessage,
 		C3.Behaviors.DragnDrop.Acts.SetEnabled,
 		C3.Plugins.Multiplayer.Cnds.OnPeerMessage,
 		C3.Plugins.Multiplayer.Acts.SignallingLeaveRoom,
+		C3.Plugins.Multiplayer.Exps.CurrentGame,
 		C3.Plugins.System.Cnds.IsGroupActive,
 		C3.Plugins.Sprite.Exps.X,
 		C3.Plugins.Sprite.Exps.Y,
@@ -107,6 +109,8 @@ self.C3_JsPropNameTable = [
 	{Keyboard: 0},
 	{ЛокальноеХранилище: 0},
 	{Выход: 0},
+	{ActiveRooms: 0},
+	{Текст: 0},
 	{GAMENAME: 0},
 	{ChatLogin: 0},
 	{ChatMessage: 0}
@@ -131,5 +135,7 @@ self.InstanceType = {
 	Chat: class extends self.ITextInputInstance {},
 	Keyboard: class extends self.IInstance {},
 	ЛокальноеХранилище: class extends self.IInstance {},
-	Выход: class extends self.IButtonInstance {}
+	Выход: class extends self.IButtonInstance {},
+	ActiveRooms: class extends self.ITextInstance {},
+	Текст: class extends self.ITextInstance {}
 }
